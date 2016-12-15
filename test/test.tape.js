@@ -6,12 +6,15 @@ const fs = require('fs');
 
 test('can load the class', (t) => {
   t.plan(1);
-  const task = new InjectRevisions('revisions', {});
+  const task = new InjectRevisions('revisions', {
+    pathToAssetMap: 'test/assetsMap/assets.json'
+  });
   t.deepEqual(task.options, {
     mappingPath: 'assets.json',
     startTag: '<!-- clientkit:(.*?) -->',
     endTag: '<!-- clientkit:end -->',
     uiPath: '',
+    pathToAssetMap: 'test/assetsMap/assets.json',
     files: []
   });
 });
@@ -24,6 +27,7 @@ test('can replace the references in a file reference', (t) => {
   async.autoInject({
     task: (done) => {
       const task = new InjectRevisions('revisions', {
+        pathToAssetMap: 'test/assetsMap/assets.json',
         files: [file]
       });
       task.execute(done);
@@ -35,6 +39,7 @@ test('can replace the references in a file reference', (t) => {
     },
     task2: (verifyFirstOutput, done) => {
       const task = new InjectRevisions('revisions', {
+        pathToAssetMap: 'test/assetsMap/assets.json',
         files: [file]
       });
       task.execute(done);

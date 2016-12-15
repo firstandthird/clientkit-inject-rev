@@ -11,7 +11,7 @@ class InjectRevision extends ClientkitTask {
 
   constructor(name, options, runner) {
     super(name, options, runner);
-    this.assetMap = new AssetMap({ pathToAssetMap: 'test/assetsMap/assets.json', cache: options.cache, readOnLoad: options.readOnLoad });
+    this.assetMap = new AssetMap({ pathToAssetMap: options.pathToAssetMap, cache: options.cache, readOnLoad: options.readOnLoad });
   }
 
   get description() {
