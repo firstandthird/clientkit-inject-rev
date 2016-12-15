@@ -4,7 +4,7 @@ const AssetMap = require('clientkit-asset');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-
+const url = require('url');
 class InjectRevision extends ClientkitTask {
 
   constructor(name, options, runner) {
@@ -25,9 +25,9 @@ class InjectRevision extends ClientkitTask {
       // regex for finding the end tag:
       endTag: '<!-- clientkit:end -->',
       // append this to the start of every file's path:
-      uiPath: '/ui/',
+      uiPath: '',
       // list of files to process:
-      files: ['index.html']
+      files: []
     };
   }
 
@@ -46,10 +46,10 @@ class InjectRevision extends ClientkitTask {
 
   getMiddleOfTag(originalValue, mappedValue) {
     if (path.extname(originalValue) === '.js') {
-      return `<script type="application/javascript" src="${this.options.uiPath}${mappedValue}">`;
+      return `<script type="application/javascript" src="${url.resolve(this.options.uiPath, mappedValue)}">`;
     }
     if (path.extname(originalValue) === '.css') {
-      return `<link rel="stylesheet" href="${this.options.uiPath}${mappedValue}">`;
+      return `<link rel="stylesheet" href="${url.resolve(this.options.uiPath, mappedValue)}">`;
     }
     return originalValue;
   }

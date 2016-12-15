@@ -11,8 +11,8 @@ test('can load the class', (t) => {
     mappingPath: 'assets.json',
     startTag: '<!-- clientkit:(.*?) -->',
     endTag: '<!-- clientkit:end -->',
-    uiPath: '/ui/',
-    files: ['index.html']
+    uiPath: '',
+    files: []
   });
 });
 
@@ -29,12 +29,12 @@ test('can replace the references in a file reference', (t) => {
     },
     verifyFirstOutput: (task, done) => {
       const content = fs.readFileSync(file).toString();
-      t.equal(content.indexOf('<link rel="stylesheet" href="/ui/common-abcdefg.css">', `<head>
+      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css">', `<head>
     <!-- clientkit:common.css -->
-    <link rel="stylesheet" href="/ui/common-abcdefg.css">
+    <link rel="stylesheet" href="common-abcdefg.css">
     <!-- clientkit:end -->
     <!-- clientkit:script.js -->
-    <script type="application/javascript" src="/ui/script-abcdefg.js">
+    <script type="application/javascript" src="script-abcdefg.js">
     <!-- clientkit:end -->
     </head>`) > -1, true);
       done();
@@ -47,12 +47,12 @@ test('can replace the references in a file reference', (t) => {
     },
     verifySecondOutput: (task2, done) => {
       const content = fs.readFileSync(file).toString();
-      t.equal(content.indexOf('<link rel="stylesheet" href="/ui/common-abcdefg.css">', `<head>
+      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css">', `<head>
     <!-- clientkit:common.css -->
-    <link rel="stylesheet" href="/ui/common-abcdefg.css">
+    <link rel="stylesheet" href="common-abcdefg.css">
     <!-- clientkit:end -->
     <!-- clientkit:script.js -->
-    <script type="application/javascript" src="/ui/script-abcdefg.js">
+    <script type="application/javascript" src="script-abcdefg.js">
     <!-- clientkit:end -->
     </head>`) > -1, true);
       done();

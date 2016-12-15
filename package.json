@@ -12,14 +12,13 @@
     "url": "git+https://github.com/firstandthird/clientkit-inject-rev.git"
   },
   "keywords": [],
-  "author": "Greg Allen <code@firstandthird.com> (http://firstandthird.com/)",
+  "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/firstandthird/clientkit-inject-rev/issues"
   },
   "homepage": "https://github.com/firstandthird/clientkit-inject-rev#readme",
   "devDependencies": {
-    "async": "^2.1.2",
     "eslint": "^3.9.1",
     "eslint-config-firstandthird": "^3.0.2",
     "eslint-plugin-import": "^2.1.0",
@@ -32,6 +31,6 @@
   "dependencies": {
     "async": "^2.1.4",
     "clientkit-task": "0.0.6",
-    "clientkit-asset": "0.0.1"
+    "clientkit-assets": "0.0.1"
   }
 }
