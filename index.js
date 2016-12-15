@@ -1,3 +1,4 @@
+'use strict'
 const async = require('async');
 const ClientkitTask = require('clientkit-task');
 const AssetMap = require('clientkit-assets');

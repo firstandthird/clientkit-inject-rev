@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "clientkit-task": "0.0.6",
-    "clientkit-assets": "1.0.0"
+    "clientkit-assets": "^1.0.0",
+    "clientkit-task": "0.0.6"
   }
 }
