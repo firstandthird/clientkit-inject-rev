@@ -29,5 +29,9 @@
   "eslintConfig": {
     "extends": "firstandthird"
   },
-  "dependencies": {}
+  "dependencies": {
+    "async": "^2.1.4",
+    "clientkit-task": "0.0.6",
+    "clientkit-asset": "0.0.1"
+  }
 }
