@@ -31,6 +31,6 @@
   "dependencies": {
     "async": "^2.1.4",
     "clientkit-task": "0.0.6",
-    "clientkit-assets": "0.0.1"
+    "clientkit-assets": "1.0.0"
   }
 }

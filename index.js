@@ -5,11 +5,12 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const url = require('url');
+
 class InjectRevision extends ClientkitTask {
 
   constructor(name, options, runner) {
     super(name, options, runner);
-    this.assetMap = new AssetMap({ pathToAssetMap: 'test/assetsMap/assets.json' });
+    this.assetMap = new AssetMap({ pathToAssetMap: 'test/assetsMap/assets.json', cache: options.cache, readOnLoad: options.readOnLoad });
   }
 
   get description() {
