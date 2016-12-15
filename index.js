@@ -1,6 +1,6 @@
 const async = require('async');
 const ClientkitTask = require('clientkit-task');
-const AssetMap = require('clientkit-asset');
+const AssetMap = require('clientkit-assets');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
