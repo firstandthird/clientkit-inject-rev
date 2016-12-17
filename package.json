@@ -1,0 +1,36 @@
+{
+  "name": "clientkit-inject-rev",
+  "version": "0.0.4",
+  "description": "clientkit library that uses clientkit-asset to replace file references to js/css files with their hashed equivalents",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "tape test/test.tape.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/clientkit-inject-rev.git"
+  },
+  "keywords": [],
+  "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/clientkit-inject-rev/issues"
+  },
+  "homepage": "https://github.com/firstandthird/clientkit-inject-rev#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-firstandthird": "^3.0.2",
+    "eslint-plugin-import": "^2.1.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "eslintConfig": {
+    "extends": "firstandthird"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "clientkit-assets": "^1.0.1",
+    "clientkit-task": "0.0.6"
+  }
+}
