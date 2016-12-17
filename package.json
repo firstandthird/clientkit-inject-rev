@@ -1,6 +1,6 @@
 {
   "name": "clientkit-inject-rev",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "clientkit library that uses clientkit-asset to replace file references to js/css files with their hashed equivalents",
   "main": "index.js",
   "scripts": {
