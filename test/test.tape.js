@@ -34,7 +34,7 @@ test('can replace the references in a file reference', (t) => {
     },
     verifyFirstOutput: (task, done) => {
       const content = fs.readFileSync(file).toString();
-      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css">', oneOutput) > -1, true);
+      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css"/>', oneOutput) > -1, true);
       done();
     },
     task2: (verifyFirstOutput, done) => {
@@ -46,7 +46,7 @@ test('can replace the references in a file reference', (t) => {
     },
     verifySecondOutput: (task2, done) => {
       const content = fs.readFileSync(file).toString();
-      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css">', secondOutput) > -1, true);
+      t.equal(content.indexOf('<link rel="stylesheet" href="common-abcdefg.css"/>', secondOutput) > -1, true);
       done();
     },
     // restore back to original version for future tests:

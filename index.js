@@ -48,10 +48,10 @@ class InjectRevision extends ClientkitTask {
 
   getMiddleOfTag(originalValue, mappedValue) {
     if (path.extname(originalValue) === '.js') {
-      return `<script type="application/javascript" src="${url.resolve(this.options.uiPath, mappedValue)}">`;
+      return `<script type="application/javascript" src="${url.resolve(this.options.uiPath, mappedValue)}"></script>`;
     }
     if (path.extname(originalValue) === '.css') {
-      return `<link rel="stylesheet" href="${url.resolve(this.options.uiPath, mappedValue)}">`;
+      return `<link rel="stylesheet" href="${url.resolve(this.options.uiPath, mappedValue)}"/>`;
     }
     return originalValue;
   }
