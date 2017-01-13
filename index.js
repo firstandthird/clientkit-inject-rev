@@ -1,17 +1,16 @@
 'use strict';
 const async = require('async');
-const ClientkitTask = require('clientkit-task');
-const AssetMap = require('clientkit-assets');
+const RunKitTask = require('runkit-task');
+const AssetMap = require('assetmap');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const url = require('url');
 
-class InjectRevision extends ClientkitTask {
+class InjectRevision extends RunKitTask {
 
-  constructor(name, options, runner) {
-    super(name, options, runner);
-    this.assetMap = new AssetMap({ pathToAssetMap: options.pathToAssetMap, cache: options.cache, readOnLoad: options.readOnLoad });
+  init() {
+    this.assetMap = new AssetMap({ pathToAssetMap: this.options.pathToAssetMap, cache: this.options.cache, readOnLoad: this.options.readOnLoad });
   }
 
   get description() {
@@ -23,9 +22,9 @@ class InjectRevision extends ClientkitTask {
       // path to a json file containing your asset map:
       mappingPath: 'assets.json',
       // regexp for finding the start tag:
-      startTag: '<!-- clientkit:(.*?) -->',
+      startTag: '<!-- runkit:(.*?) -->',
       // regex for finding the end tag:
-      endTag: '<!-- clientkit:end -->',
+      endTag: '<!-- runkit:end -->',
       // append this to the start of every file's path:
       uiPath: '',
       // list of files to process:

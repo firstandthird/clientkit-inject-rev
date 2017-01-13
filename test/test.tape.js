@@ -8,11 +8,11 @@ test('can load the class', (t) => {
   t.plan(1);
   const task = new InjectRevisions('revisions', {
     pathToAssetMap: 'test/assetsMap/assets.json'
-  });
+  }, {});
   t.deepEqual(task.options, {
     mappingPath: 'assets.json',
-    startTag: '<!-- clientkit:(.*?) -->',
-    endTag: '<!-- clientkit:end -->',
+    startTag: '<!-- runkit:(.*?) -->',
+    endTag: '<!-- runkit:end -->',
     uiPath: '',
     pathToAssetMap: 'test/assetsMap/assets.json',
     files: []
@@ -29,7 +29,7 @@ test('can replace the references in a file reference', (t) => {
       const task = new InjectRevisions('revisions', {
         pathToAssetMap: 'test/assetsMap/assets.json',
         files: [file]
-      });
+      }, {});
       task.execute(done);
     },
     verifyFirstOutput: (task, done) => {
@@ -41,7 +41,7 @@ test('can replace the references in a file reference', (t) => {
       const task = new InjectRevisions('revisions', {
         pathToAssetMap: 'test/assetsMap/assets.json',
         files: [file]
-      });
+      }, {});
       task.execute(done);
     },
     verifySecondOutput: (task2, done) => {

@@ -1,7 +1,7 @@
 {
-  "name": "clientkit-inject-rev",
+  "name": "runkit-inject-rev",
   "version": "1.0.2",
-  "description": "clientkit library that uses clientkit-asset to replace file references to js/css files with their hashed equivalents",
+  "description": "runkit library that uses assetmap to replace file references to js/css files with their hashed equivalents",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/clientkit-inject-rev.git"
+    "url": "git+https://github.com/firstandthird/runkit-inject-rev.git"
   },
   "keywords": [],
   "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/firstandthird/clientkit-inject-rev/issues"
+    "url": "https://github.com/firstandthird/runkit-inject-rev/issues"
   },
-  "homepage": "https://github.com/firstandthird/clientkit-inject-rev#readme",
+  "homepage": "https://github.com/firstandthird/runkit-inject-rev#readme",
   "devDependencies": {
     "eslint": "^3.9.1",
     "eslint-config-firstandthird": "^3.0.2",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "clientkit-assets": "^1.0.1",
-    "clientkit-task": "0.0.8"
+    "assetmap": "2.0.0",
+    "runkit-task": "0.0.10"
   }
 }
