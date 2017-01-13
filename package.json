@@ -1,6 +1,6 @@
 {
   "name": "runkit-inject-rev",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "runkit library that uses assetmap to replace file references to js/css files with their hashed equivalents",
   "main": "index.js",
   "scripts": {
