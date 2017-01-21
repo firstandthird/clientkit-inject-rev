@@ -11,8 +11,8 @@ test('can load the class', (t) => {
   }, {});
   t.deepEqual(task.options, {
     mappingPath: 'assets.json',
-    startTag: '<!-- runkit:(.*?) -->',
-    endTag: '<!-- runkit:end -->',
+    startTag: '<!-- taskkit:(.*?) -->',
+    endTag: '<!-- taskkit:end -->',
     uiPath: '',
     pathToAssetMap: 'test/assetsMap/assets.json',
     files: []

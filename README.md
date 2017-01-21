@@ -1,2 +1,2 @@
-# runkit-inject-rev
-RunKit task to inject revision hashes into files
+# taskkit-inject-rev
+TaskKit task to inject revision hashes into files
