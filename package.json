@@ -1,7 +1,7 @@
 {
-  "name": "runkit-inject-rev",
+  "name": "taskkit-inject-rev",
   "version": "2.0.0",
-  "description": "runkit library that uses assetmap to replace file references to js/css files with their hashed equivalents",
+  "description": "taskkit library that uses assetmap to replace file references to js/css files with their hashed equivalents",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/runkit-inject-rev.git"
+    "url": "git+https://github.com/firstandthird/taskkit-inject-rev.git"
   },
   "keywords": [],
   "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/firstandthird/runkit-inject-rev/issues"
+    "url": "https://github.com/firstandthird/taskkit-inject-rev/issues"
   },
-  "homepage": "https://github.com/firstandthird/runkit-inject-rev#readme",
+  "homepage": "https://github.com/firstandthird/taskkit-inject-rev#readme",
   "devDependencies": {
     "eslint": "^3.9.1",
     "eslint-config-firstandthird": "^3.0.2",
@@ -29,8 +29,8 @@
     "extends": "firstandthird"
   },
   "dependencies": {
-    "async": "^2.1.4",
     "assetmap": "2.0.0",
-    "runkit-task": "0.0.10"
+    "async": "^2.1.4",
+    "taskkit-task": "0.0.11"
   }
 }
