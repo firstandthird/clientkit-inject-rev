@@ -1,6 +1,6 @@
 {
   "name": "taskkit-inject-rev",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "taskkit library that uses assetmap to replace file references to js/css files with their hashed equivalents",
   "main": "index.js",
   "scripts": {
